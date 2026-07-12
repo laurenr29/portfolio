@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauren Ragland — Senior UX Content Designer Portfolio</title>
+  <meta name="description" content="Portfolio of Lauren Ragland, a Senior UX Content Designer with over 15 years of experience building simple, empathetic user experiences for world-class brands.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Google Aurora Background -->
+  <div id="aurora-bg" class="aurora-bg" aria-hidden="true">
+    <div class="aurora-orb orb-blue"></div>
+    <div class="aurora-orb orb-red"></div>
+    <div class="aurora-orb orb-yellow"></div>
+    <div class="aurora-orb orb-green"></div>
+  </div>
+
+  <!-- Premium Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-link" id="nav-logo">
+        <span class="brand-logo-text"><span class="google-blue">L</span><span class="google-red">a</span><span class="google-yellow">u</span><span class="google-blue">r</span><span class="google-green">e</span><span class="google-red">n</span></span>
+        <span class="brand-role">UX Content Design</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#search-anchor" class="nav-item active" id="nav-search">Search</a>
+        <a href="#translator-section" class="nav-item" id="nav-translator">Translator</a>
+        <a href="#maps-section" class="nav-item" id="nav-maps">Project Map</a>
+        <a href="#keep-section" class="nav-item" id="nav-keep">Keep Notes</a>
+        <a href="#cv-view" class="nav-item" id="nav-cv">CV</a>
+        <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark/light mode">
+          <span class="theme-label">Light</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN SCROLLABLE VIEW -->
+  <main class="main-container">
+    
+    <!-- Hero & Google Search Engine Section -->
+    <section class="search-hero-section" id="search-anchor">
+      <div class="hero-content">
+        <h1 class="logo-headline">
+          <span class="google-blue">L</span><span class="google-red">a</span><span class="google-yellow">u</span><span class="google-blue">r</span><span class="google-green">e</span><span class="google-red">n</span>
+          <span class="headline-suffix">Ragland</span>
+        </h1>
+        <p class="hero-subtext">Senior UX Content Designer • Experience Strategist • Plain Language Advocate</p>
+        
+        <!-- Google Search Mockup Box -->
+        <div class="google-search-container">
+          <div class="search-box-row">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input type="text" id="main-search-input" placeholder="Search my 15+ years of UX copy, localization, design systems..." aria-label="Search portfolio">
+            <button id="search-clear-btn" class="search-clear-btn" style="display:none;" aria-label="Clear search">&times;</button>
+            <span class="mic-icon material-symbols-outlined google-blue-text" title="Voice Search (Mock)">mic</span>
+            <span class="lens-icon material-symbols-outlined google-red-text" title="Visual Search (Mock)">center_focus_strong</span>
+          </div>
+          <div class="search-buttons-row">
+            <button id="search-btn" class="google-style-btn">Google Search</button>
+            <button id="lucky-btn" class="google-style-btn">I'm Feeling Lucky</button>
+          </div>
+          <div id="search-results-stats" class="search-results-stats" style="display:none;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES GRID SHOWCASE -->
+    <section class="projects-section" id="projects-section">
+      <div class="section-container">
+        <div class="grid-header">
+          <span class="section-pill google-blue-bg">Portfolio Grid</span>
+          <h2>Selected Case Studies</h2>
+        </div>
+        
+        <div class="case-grid" id="case-grid">
+          <!-- Cards will be populated dynamically or static fallback -->
+          <!-- Card 1: U.S. Bank -->
+          <article class="case-card card-blue clickable-card" data-case="usbank" role="button" tabindex="0">
+            <div class="card-border-glow"></div>
+            <div class="card-tag">U.S. Bank</div>
+            <h3>Financial mobile banking architecture</h3>
+            <p>Led content strategy to overhaul the branch locator and appointment scheduling workflows, increasing accessibility and SEO value.</p>
+            <div class="card-tags-row">
+              <span class="card-pill">UX Writing</span>
+              <span class="card-pill">Info Architecture</span>
+              <span class="card-pill">SEO API Feed</span>
+            </div>
+            <span class="card-action">View Case Study &rarr;</span>
+          </article>
+
+          <!-- Card 2: Verizon -->
+          <article class="case-card card-red clickable-card" data-case="verizon" role="button" tabindex="0">
+            <div class="card-border-glow"></div>
+            <div class="card-tag">Verizon Mobile</div>
+            <h3>Simplicity & 3.0 brand overhaul</h3>
+            <p>Authored microcopy under a strict "Extreme Simplicity" mandate, integrating third-party digital perks seamlessly into mobile buying flows.</p>
+            <div class="card-tags-row">
+              <span class="card-pill">Brand 3.0</span>
+              <span class="card-pill">Simplicity</span>
+              <span class="card-pill">Perks Integration</span>
+            </div>
+            <span class="card-action">View Case Study &rarr;</span>
+          </article>
+
+          <!-- Card 3: Verizon Fios -->
+          <article class="case-card card-green clickable-card" data-case="verizon1" role="button" tabindex="0">
+            <div class="card-border-glow"></div>
+            <div class="card-tag">Verizon Fios</div>
+            <h3>Global design system alignment</h3>
+            <p>Aligned UX copy and interaction guidelines across multi-layered home broadband and TV plan options for millions of global subscribers.</p>
+            <div class="card-tags-row">
+              <span class="card-pill">Broadband</span>
+              <span class="card-pill">Design Systems</span>
+              <span class="card-pill">Complex Systems</span>
+            </div>
+            <span class="card-action">View Case Study &rarr;</span>
+          </article>
+
+          <!-- Card 4: Zillow -->
+          <article class="case-card card-yellow clickable-card" data-case="zillow" role="button" tabindex="0">
+            <div class="card-border-glow"></div>
+            <div class="card-tag">Zillow</div>
+            <h3>Leasing UX & apartment application flows</h3>
+            <p>Designed clear renter journeys, simplifying credit checks, background checks, and property details microcopy.</p>
+            <div class="card-tags-row">
+              <span class="card-pill">Leasing UX</span>
+              <span class="card-pill">Renter Journeys</span>
+              <span class="card-pill">Interaction Flow</span>
+            </div>
+            <span class="card-action">View Case Study &rarr;</span>
+          </article>
+
+          <!-- Card 5: WebMD -->
+          <article class="case-card card-red clickable-card" data-case="webmd" role="button" tabindex="0">
+            <div class="card-border-glow"></div>
+            <div class="card-tag">WebMD</div>
+            <h3>Empathetic medical feature writing</h3>
+            <p>Distilled complicated health, pharmaceutical, and treatment procedures into clear, accessible patient storytelling features.</p>
+            <div class="card-tags-row">
+              <span class="card-pill">Medical UX</span>
+              <span class="card-pill">Plain Language</span>
+              <span class="card-pill">Patient Journeys</span>
+            </div>
+            <span class="card-action">View Case Study &rarr;</span>
+          </article>
+
+          <!-- Card 6: Microsoft -->
+          <article class="case-card card-blue clickable-card" data-case="microsoft" role="button" tabindex="0">
+            <div class="card-border-glow"></div>
+            <div class="card-tag">Microsoft</div>
+            <h3>Conversational cloud portfolio</h3>
+            <p>Architected B2B onboarding guides, conversational AI flows, and documentation for enterprise cloud systems.</p>
+            <div class="card-tags-row">
+              <span class="card-pill">Conversational AI</span>
+              <span class="card-pill">Cloud B2B</span>
+              <span class="card-pill">SaaS Onboarding</span>
+            </div>
+            <span class="card-action">View Case Study &rarr;</span>
+          </article>
+
+          <!-- Card 7: The Home Depot -->
+          <article class="case-card card-green clickable-card" data-case="homedepot" role="button" tabindex="0">
+            <div class="card-border-glow"></div>
+            <div class="card-tag">The Home Depot</div>
+            <h3>B2C retail cart & checkout flow</h3>
+            <p>Optimized purchase cycles, payment options, and delivery tracking interfaces to reduce checkout abandonment.</p>
+            <div class="card-tags-row">
+              <span class="card-pill">Retail E-Commerce</span>
+              <span class="card-pill">Checkout UX</span>
+              <span class="card-pill">Payment Flows</span>
+            </div>
+            <span class="card-action">View Case Study &rarr;</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE TRANSLATE JARGON DECIPHERER WIDGET -->
+    <section class="translator-section" id="translator-section">
+      <div class="section-container">
+        <div class="grid-header">
+          <span class="section-pill google-red-bg">Interactive Translate</span>
+          <h2>Jargon-to-Human Decipherer</h2>
+          <p class="section-desc">UX Writing is translation. Re-write corporate tech speak into clear, plain language in real time.</p>
+        </div>
+
+        <div class="translator-wrapper">
+          <!-- Left: Jargon Box -->
+          <div class="translator-panel">
+            <div class="panel-top-row">
+              <span class="panel-lang active">Corporate Jargon</span>
+            </div>
+            <div class="panel-body">
+              <select id="jargon-select" aria-label="Select Jargon Phrase">
+                <option value="synergy">"We must leverage synergistic paradigms to facilitate cross-functional alignment."</option>
+                <option value="disclosure">"Please execute comprehensive review of details prior to proceeding to subsequent screen."</option>
+                <option value="error">"System error 404: The query requested contains attributes which are currently unavailable."</option>
+                <option value="perks">"Optimize monetized partner rewards packages by opting into premium tier reward networks."</option>
+                <option value="navigation">"Utilize the digital architectural orientation assets to orient yourself geographically."</option>
+              </select>
+              <textarea id="jargon-text" readonly></textarea>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="translator-mid-icon">
+            <span class="material-symbols-outlined">swap_horiz</span>
+          </div>
+
+          <!-- Right: Clear Translation Box -->
+          <div class="translator-panel translation-output">
+            <div class="panel-top-row">
+              <span class="panel-lang active">Empathetic UX Copy</span>
+              <span class="translated-badge">Clean</span>
+            </div>
+            <div class="panel-body">
+              <textarea id="human-text" readonly></textarea>
+              <div class="translation-meta">
+                <span class="meta-label">Why it works:</span>
+                <p id="translation-why">Saves user processing time by removing empty buzzwords.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE MAPS PROJECT PINBOARD -->
+    <section class="maps-section" id="maps-section">
+      <div class="section-container">
+        <div class="grid-header">
+          <span class="section-pill google-green-bg">Google Maps API</span>
+          <h2>Case Study Location Board</h2>
+          <p class="section-desc">Click on a project pin on the interactive canvas below to read a quick-spec review.</p>
+        </div>
+
+        <div class="maps-container">
+          <!-- Vector Map Mockup -->
+          <div class="vector-map" id="vector-map">
+            <!-- Simulated roads & blocks -->
+            <div class="map-road road-h" style="top: 25%;"></div>
+            <div class="map-road road-h" style="top: 65%;"></div>
+            <div class="map-road road-v" style="left: 30%;"></div>
+            <div class="map-road road-v" style="left: 70%;"></div>
+            
+            <!-- Pulsing Pins -->
+            <div class="map-pin pin-blue pulse" style="top: 20%; left: 25%;" data-case="usbank" title="U.S. Bank Project">
+              <span class="material-symbols-outlined">location_on</span>
+              <span class="pin-tooltip">U.S. Bank</span>
+            </div>
+            <div class="map-pin pin-red pulse" style="top: 30%; left: 65%;" data-case="verizon" title="Verizon Mobile Project">
+              <span class="material-symbols-outlined">location_on</span>
+              <span class="pin-tooltip">Verizon</span>
+            </div>
+            <div class="map-pin pin-green pulse" style="top: 55%; left: 75%;" data-case="verizon1" title="Verizon Fios Project">
+              <span class="material-symbols-outlined">location_on</span>
+              <span class="pin-tooltip">Verizon Fios</span>
+            </div>
+            <div class="map-pin pin-yellow pulse" style="top: 75%; left: 35%;" data-case="zillow" title="Zillow Project">
+              <span class="material-symbols-outlined">location_on</span>
+              <span class="pin-tooltip">Zillow</span>
+            </div>
+            <div class="map-pin pin-red pulse" style="top: 60%; left: 15%;" data-case="webmd" title="WebMD Project">
+              <span class="material-symbols-outlined">location_on</span>
+              <span class="pin-tooltip">WebMD</span>
+            </div>
+            <div class="map-pin pin-blue pulse" style="top: 15%; left: 80%;" data-case="microsoft" title="Microsoft Project">
+              <span class="material-symbols-outlined">location_on</span>
+              <span class="pin-tooltip">Microsoft</span>
+            </div>
+          </div>
+
+          <!-- Preview Sidebar -->
+          <div class="map-preview-sidebar" id="map-preview-sidebar">
+            <div class="sidebar-placeholder" id="sidebar-placeholder">
+              <span class="material-symbols-outlined">explore</span>
+              <h4>Select a pin on the map</h4>
+              <p>Explore where Lauren designed mobile apps, locator systems, and treatment platforms.</p>
+            </div>
+            <div class="sidebar-details" id="sidebar-details" style="display:none;">
+              <span class="detail-client-tag" id="map-detail-client">U.S. Bank</span>
+              <h4 id="map-detail-title">Financial Banking locator</h4>
+              <p id="map-detail-desc">Details of project...</p>
+              <div class="detail-bullets" id="map-detail-bullets">
+                <!-- Bullets -->
+              </div>
+              <button class="google-style-btn" id="map-detail-btn">Open Case Study</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE KEEP STICKY NOTE BOARD -->
+    <section class="keep-section" id="keep-section">
+      <div class="section-container">
+        <div class="grid-header">
+          <span class="section-pill google-yellow-bg">Google Keep Board</span>
+          <h2> Lauren's Content Design Guidelines</h2>
+          <p class="section-desc">A collection of core UX writing rules, facts, and key metrics that shape Lauren's content work.</p>
+        </div>
+
+        <div class="keep-filter-row">
+          <button class="keep-filter-btn active" data-category="all">All Notes</button>
+          <button class="keep-filter-btn" data-category="principles">Principles</button>
+          <button class="keep-filter-btn" data-category="achievements">Achievements</button>
+          <button class="keep-filter-btn" data-category="facts">Quick Stats</button>
+        </div>
+
+        <div class="keep-grid" id="keep-grid">
+          <!-- Sticky Note 1 -->
+          <div class="keep-note note-yellow" data-category="principles">
+            <h4 class="note-title">Plain Language Principle</h4>
+            <p class="note-body">Never use industry jargon where a simple word will do. Plain language is accessible to all reading comprehension levels and speeds translation.</p>
+          </div>
+          <!-- Sticky Note 2 -->
+          <div class="keep-note note-red" data-category="facts">
+            <h4 class="note-title">15+ Years</h4>
+            <p class="note-body"> Lauren has designed high-impact digital copy, guidelines, and user navigation maps since 2011.</p>
+          </div>
+          <!-- Sticky Note 3 -->
+          <div class="keep-note note-green" data-category="principles">
+            <h4 class="note-title">Progressive Disclosure</h4>
+            <p class="note-body">Show users all the information they need, but not all at once. Break complex financial or medical inputs across clean layout sequences.</p>
+          </div>
+          <!-- Sticky Note 4 -->
+          <div class="keep-note note-blue" data-category="achievements">
+            <h4 class="note-title">Global Alignment</h4>
+            <p class="note-body">Led content strategy across multi-layered teams at Verizon and U.S. Bank, standardizing microcopy frameworks across design systems.</p>
+          </div>
+          <!-- Sticky Note 5 -->
+          <div class="keep-note note-yellow" data-category="principles">
+            <h4 class="note-title">Accessibility (A11y) first</h4>
+            <p class="note-body">Write for screen readers first. Ensure buttons have clear accessibility labels, maps have text lists, and forms have descriptive errors.</p>
+          </div>
+          <!-- Sticky Note 6 -->
+          <div class="keep-note note-green" data-category="facts">
+            <h4 class="note-title">7 Case Studies</h4>
+            <p class="note-body">Explore verified case studies covering medical tech, checkout design, apartment leasing, and telecom product systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRICULUM VITAE VIEW (CV) -->
+    <section class="cv-section" id="cv-view">
+      <div class="section-container">
+        <div class="cv-paper">
+          <header class="cv-header">
+            <div class="cv-header-left">
+              <h2>Lauren Ragland</h2>
+              <p class="cv-subhead">Senior UX Content Designer &amp; Writer</p>
+            </div>
+            <div class="cv-header-right">
+              <div>Atlanta, GA • Remote</div>
+              <div><a href="mailto:raglandlauren@gmail.com">raglandlauren@gmail.com</a></div>
+            </div>
+          </header>
+
+          <hr class="cv-divider">
+
+          <div class="cv-layout-grid">
+            <div class="cv-main-col">
+              <!-- Summary -->
+              <section class="cv-block">
+                <h3 class="cv-heading">Professional Summary</h3>
+                <p>Deadline-driven, solution-oriented Senior UX Writer and Content Designer with 15+ years of experience leading strategic copy architectures for major global corporations (Verizon, Microsoft, U.S. Bank, Zillow, WebMD). Specialized in translating complex digital systems and dense jargon into clear, plain language.</p>
+              </section>
+
+              <!-- Experience -->
+              <section class="cv-block">
+                <h3 class="cv-heading">Professional Experience</h3>
+                
+                <!-- U.S. Bank -->
+                <div class="cv-job">
+                  <div class="cv-job-header">
+                    <h4>Lead UX Content Strategist (Contract)</h4>
+                    <span class="cv-job-company">U.S. Bank / Synergis</span>
+                    <span class="cv-job-date">2021 – 2022</span>
+                  </div>
+                  <ul class="cv-bullets">
+                    <li>Led UX content design for the redesigned branch locator and digital appointment scheduling workflows across web and mobile systems.</li>
+                    <li>Collaborated with design architects, SEO researchers, and engineers to optimize location-based Google API search results feeds.</li>
+                  </ul>
+                </div>
+
+                <!-- Verizon -->
+                <div class="cv-job">
+                  <div class="cv-job-header">
+                    <h4>Senior UX Content Strategist (Contract)</h4>
+                    <span class="cv-job-company">Verizon / BayOne &amp; Simplicity</span>
+                    <span class="cv-job-date">2017 – 2021</span>
+                  </div>
+                  <ul class="cv-bullets">
+                    <li>Authored transactional flow copy and onboarding microcopy for My Verizon App under a strict "Extreme Simplicity" design direction.</li>
+                    <li>Managed global localization and compliance matrices across third-party partner perk systems (e.g. Disney+, Apple Music).</li>
+                  </ul>
+                </div>
+
+                <!-- Zillow -->
+                <div class="cv-job">
+                  <div class="cv-job-header">
+                    <h4>Senior UX Writer &amp; Content Designer (Contract)</h4>
+                    <span class="cv-job-company">Zillow Group / Collabera</span>
+                    <span class="cv-job-date">2016 – 2017</span>
+                  </div>
+                  <ul class="cv-bullets">
+                    <li>Developed leasing flows, apartment application interfaces, and background verification forms for Zillow Rental platforms.</li>
+                  </ul>
+                </div>
+
+                <!-- Microsoft -->
+                <div class="cv-job">
+                  <div class="cv-job-header">
+                    <h4>UX Writer &amp; Editor (Contract)</h4>
+                    <span class="cv-job-company">Microsoft / Ascent</span>
+                    <span class="cv-job-date">2015 – 2016</span>
+                  </div>
+                  <ul class="cv-bullets">
+                    <li>Drafted conversational B2B tutorials, setup guides, and administrative controls for Microsoft Cloud &amp; Enterprise portfolios.</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+
+            <div class="cv-sidebar-col">
+              <section class="cv-block">
+                <h3 class="cv-heading">Skills</h3>
+                <div class="cv-skills-grid">
+                  <span>UX Writing</span>
+                  <span>Content Strategy</span>
+                  <span>Information Architecture</span>
+                  <span>Plain Language</span>
+                  <span>Content Matrices</span>
+                  <span>Usability Testing</span>
+                  <span>Agile / Sprints</span>
+                  <span>Figma / Sketch</span>
+                </div>
+              </section>
+
+              <section class="cv-block">
+                <h3 class="cv-heading">Education</h3>
+                <div class="cv-edu-item">
+                  <strong>Georgia Institute of Technology</strong>
+                  <p>UX/UI Design Bootcamp (2020)</p>
+                </div>
+                <div class="cv-edu-item">
+                  <strong>Georgia State University</strong>
+                  <p>Bachelor of Arts, English Literature</p>
+                  <p class="cv-meta">Magna Cum Laude, Creative Writing</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Deep-Dive Case Study Reader Modal -->
+  <div id="case-study-modal" class="cs-modal" aria-hidden="true" role="dialog" aria-label="Case Study Reader">
+    <div class="cs-modal-backdrop" id="modal-backdrop"></div>
+    <div class="cs-modal-wrapper">
+      <button class="cs-modal-close" id="modal-close" aria-label="Close Case Study">&times;</button>
+      <div class="cs-modal-content">
+        <!-- Title and header -->
+        <div class="modal-header-block">
+          <span class="modal-client-label" id="modal-client-label">U.S. BANK</span>
+          <h2 id="modal-title">Financial Banking System Redesign</h2>
+          <p class="modal-overview" id="modal-overview">Overview copy goes here...</p>
+        </div>
+        
+        <!-- Metadata cards -->
+        <div class="modal-meta-grid">
+          <div class="meta-col">
+            <span class="meta-lbl">Client</span>
+            <span class="meta-val" id="modal-meta-client">U.S. Bank</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-lbl">My Role</span>
+            <span class="meta-val" id="modal-meta-role">Lead Content Strategist</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-lbl">UX Focus</span>
+            <span class="meta-val" id="modal-meta-focus">Financial UX</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-lbl">Key Deliverables</span>
+            <ul class="meta-deliverables" id="modal-meta-deliverables">
+              <!-- items -->
+            </ul>
+          </div>
+        </div>
+
+        <hr class="modal-divider">
+
+        <!-- Embedded Case Content Grid (Responsive layout flow) -->
+        <div class="modal-story-flow" id="modal-story-flow">
+          <!-- Populated in app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image zoom Lightbox Modal -->
+  <div id="img-lightbox" class="img-lightbox" aria-hidden="true" role="dialog" aria-label="Zoomed Image">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-zoom-img" src="" alt="Expanded design screenshot">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
