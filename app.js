@@ -66,7 +66,7 @@ const CASE_STUDY_DATA = {
       "Checkout flow microcopy",
       "Jira defect tracking"
     ],
-    "img": "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/74c5d73c-4480-42da-8bcc-ccf2c4ce85f6/Screenshot+2023-08-10+at+5.04.23+PM.png?format=1000w",
+    "img": "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/74c5d73c-4480-42da-8bcc-ccf2c4ce85f6/Screenshot+2023-08-10+at+5.04.23+PM.png?format=750w",
     "overview": "Overhauled transactional flow copy and onboarding microcopy for My Verizon App under a strict \"Extreme Simplicity\" mandate to deliver minimal words for maximum user comprehension.",
     "sections": [
       {
@@ -107,7 +107,7 @@ const CASE_STUDY_DATA = {
       "Cross-functional sprint guides",
       "UX audits"
     ],
-    "img": "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/73d74c2d-4dd0-482a-8bcc-ccf2c4ce85f6/fios-hero.png?format=1000w",
+    "img": "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/73d74c2d-4dd0-482a-8bcc-ccf2c4ce85f6/fios-hero.png?format=750w",
     "overview": "Aligned UX copy and transactional frameworks across home broadband, fiber optics, and digital television plan options for millions of active Verizon Fios accounts.",
     "sections": [
       {
@@ -279,9 +279,19 @@ const JARGON_DICTIONARY = {
 
 // DOM Cache
 document.addEventListener("DOMContentLoaded", () => {
-  // Navigation & Theme
+  // Navigation & Views
   const themeToggleBtn = document.getElementById("theme-toggle-btn");
   const rootElement = document.documentElement;
+
+  const galleryView = document.getElementById("gallery-view");
+  const caseStudyView = document.getElementById("case-study-view");
+  const cvView = document.getElementById("cv-view");
+
+  const navWorkLink = document.getElementById("nav-work-link");
+  const navTranslatorLink = document.getElementById("nav-translator-link");
+  const navMapsLink = document.getElementById("nav-maps-link");
+  const navKeepLink = document.getElementById("nav-keep-link");
+  const navCvLink = document.getElementById("nav-cv-link");
 
   // Search Engine Mockup
   const mainSearchInput = document.getElementById("main-search-input");
@@ -289,7 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBtn = document.getElementById("search-btn");
   const luckyBtn = document.getElementById("lucky-btn");
   const searchResultsStats = document.getElementById("search-results-stats");
-  const caseGrid = document.getElementById("case-grid");
   const caseCards = document.querySelectorAll(".case-card");
 
   // Jargon Translator
@@ -312,20 +321,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const keepFilterBtns = document.querySelectorAll(".keep-filter-btn");
   const keepNotes = document.querySelectorAll(".keep-note");
 
-  // Case Study modal
-  const csModal = document.getElementById("case-study-modal");
-  const modalClose = document.getElementById("modal-close");
-  const modalBackdrop = document.getElementById("modal-backdrop");
-  
-  // Modal text caches
-  const modalClientLabel = document.getElementById("modal-client-label");
-  const modalTitle = document.getElementById("modal-title");
-  const modalOverview = document.getElementById("modal-overview");
-  const modalMetaClient = document.getElementById("modal-meta-client");
-  const modalMetaRole = document.getElementById("modal-meta-role");
-  const modalMetaFocus = document.getElementById("modal-meta-focus");
-  const modalMetaDeliverables = document.getElementById("modal-meta-deliverables");
-  const modalStoryFlow = document.getElementById("modal-story-flow");
+  // Case Study Reader View Elements
+  const btnBackGallery = document.getElementById("btn-back-gallery");
+  const csClientLabel = document.getElementById("cs-client-label");
+  const csTitle = document.getElementById("cs-title");
+  const csOverview = document.getElementById("cs-overview");
+  const csMetaClient = document.getElementById("cs-meta-client");
+  const csMetaRole = document.getElementById("cs-meta-role");
+  const csMetaFocus = document.getElementById("cs-meta-focus");
+  const csDeliverablesList = document.getElementById("cs-deliverables-list");
+  const csContentArea = document.getElementById("cs-content-area");
+  const btnNextCase = document.getElementById("btn-next-case");
+  const csNextTitle = document.getElementById("cs-next-title");
 
   // Lightbox cache
   const imgLightbox = document.getElementById("img-lightbox");
@@ -333,8 +340,123 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightboxBackdrop = document.getElementById("lightbox-backdrop");
   const lightboxZoomImg = document.getElementById("lightbox-zoom-img");
 
+  let currentCaseId = null;
+
   /* ==========================================================================
-     1. THEME TOGGLE
+     1. VIEW SWITCHING LOGIC
+     ========================================================================== */
+  function showGalleryView() {
+    if (caseStudyView) {
+      caseStudyView.classList.remove("active-view");
+      caseStudyView.classList.add("hidden-view");
+    }
+    if (cvView) {
+      cvView.classList.remove("active-view");
+      cvView.classList.add("hidden-view");
+    }
+    if (galleryView) {
+      galleryView.classList.remove("hidden-view");
+      galleryView.classList.add("active-view");
+    }
+    document.querySelectorAll(".nav-links a").forEach(link => link.classList.remove("active"));
+    if (navWorkLink) navWorkLink.classList.add("active");
+    currentCaseId = null;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function showCaseStudyView() {
+    if (galleryView) {
+      galleryView.classList.remove("active-view");
+      galleryView.classList.add("hidden-view");
+    }
+    if (cvView) {
+      cvView.classList.remove("active-view");
+      cvView.classList.add("hidden-view");
+    }
+    if (caseStudyView) {
+      caseStudyView.classList.remove("hidden-view");
+      caseStudyView.classList.add("active-view");
+    }
+    document.querySelectorAll(".nav-links a").forEach(link => link.classList.remove("active"));
+    if (navWorkLink) navWorkLink.classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function showCvView() {
+    if (galleryView) {
+      galleryView.classList.remove("active-view");
+      galleryView.classList.add("hidden-view");
+    }
+    if (caseStudyView) {
+      caseStudyView.classList.remove("active-view");
+      caseStudyView.classList.add("hidden-view");
+    }
+    if (cvView) {
+      cvView.classList.remove("hidden-view");
+      cvView.classList.add("active-view");
+    }
+    document.querySelectorAll(".nav-links a").forEach(link => link.classList.remove("active"));
+    if (navCvLink) navCvLink.classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Hook Navigation Link clicks
+  if (navWorkLink) {
+    navWorkLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showGalleryView();
+    });
+  }
+
+  if (navTranslatorLink) {
+    navTranslatorLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showGalleryView();
+      setTimeout(() => {
+        const sec = document.getElementById("translator-section");
+        if (sec) sec.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    });
+  }
+
+  if (navMapsLink) {
+    navMapsLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showGalleryView();
+      setTimeout(() => {
+        const sec = document.getElementById("maps-section");
+        if (sec) sec.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    });
+  }
+
+  if (navKeepLink) {
+    navKeepLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showGalleryView();
+      setTimeout(() => {
+        const sec = document.getElementById("keep-section");
+        if (sec) sec.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    });
+  }
+
+  if (navCvLink) {
+    navCvLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showCvView();
+    });
+  }
+
+  if (btnBackGallery) {
+    btnBackGallery.addEventListener("click", (e) => {
+      e.preventDefault();
+      showGalleryView();
+    });
+  }
+
+  /* ==========================================================================
+     2. THEME TOGGLE
      ========================================================================== */
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener("click", () => {
@@ -346,7 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================================
-     2. SEARCH HUB & RANDOM LUCKY MODE
+     3. SEARCH HUB & RANDOM LUCKY MODE
      ========================================================================== */
   function filterProjects(query) {
     const cleanQuery = query.toLowerCase().trim();
@@ -356,7 +478,7 @@ document.addEventListener("DOMContentLoaded", () => {
     caseCards.forEach(card => {
       const text = card.textContent.toLowerCase();
       if (text.includes(cleanQuery)) {
-        card.style.display = "block";
+        card.style.display = "flex";
         visibleCount++;
       } else {
         card.style.display = "none";
@@ -404,13 +526,13 @@ document.addEventListener("DOMContentLoaded", () => {
       luckyBtn.textContent = "Loading luck...";
       setTimeout(() => {
         luckyBtn.textContent = "I'm Feeling Lucky";
-        openCaseStudyModal(randomId);
-      }, 800);
+        openCaseStudy(randomId);
+      }, 700);
     });
   }
 
   /* ==========================================================================
-     3. JARGON TRANSLATOR WIDGET
+     4. JARGON TRANSLATOR WIDGET
      ========================================================================== */
   function updateJargonTranslation() {
     const key = jargonSelect.value;
@@ -429,12 +551,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (jargonSelect) {
     jargonSelect.addEventListener("change", updateJargonTranslation);
-    // Initialize default selection
     updateJargonTranslation();
   }
 
   /* ==========================================================================
-     4. INTERACTIVE MAP PINBOARD
+     5. INTERACTIVE MAP PINBOARD
      ========================================================================== */
   mapPins.forEach(pin => {
     pin.addEventListener("click", () => {
@@ -460,13 +581,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       mapDetailBtn.onclick = () => {
-        openCaseStudyModal(caseId);
+        openCaseStudy(caseId);
       };
     });
   });
 
   /* ==========================================================================
-     5. KEEP STICKY NOTE BOARD
+     6. KEEP STICKY NOTE BOARD
      ========================================================================== */
   keepFilterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -486,33 +607,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ==========================================================================
-     6. CASE STUDY MODAL & STORY FLOW POPULATOR
+     7. CASE STUDY READER POPULATOR (Editorial Layout Grid Flow)
      ========================================================================== */
-  function openCaseStudyModal(caseId) {
+  function openCaseStudy(caseId) {
     const data = CASE_STUDY_DATA[caseId];
     if (!data) return;
 
-    modalClientLabel.textContent = data.client.toUpperCase();
-    modalTitle.textContent = data.title;
-    modalOverview.textContent = data.overview;
-    modalMetaClient.textContent = data.client;
-    modalMetaRole.textContent = data.role;
-    modalMetaFocus.textContent = data.focus;
+    currentCaseId = caseId;
+
+    csClientLabel.textContent = `${data.client.toUpperCase()} — CASE STUDY`;
+    csTitle.textContent = data.title;
+    csOverview.textContent = data.overview;
+    csMetaClient.textContent = data.client;
+    csMetaRole.textContent = data.role;
+    csMetaFocus.textContent = data.focus;
 
     // Deliverables
-    modalMetaDeliverables.innerHTML = "";
+    csDeliverablesList.innerHTML = "";
     data.deliverables.forEach(item => {
       const li = document.createElement("li");
       li.textContent = item;
-      modalMetaDeliverables.appendChild(li);
+      csDeliverablesList.appendChild(li);
     });
 
-    // Content Story Flow Section Builders
-    modalStoryFlow.innerHTML = "";
-    
-    // Custom hardcoded editorial flow overrides (like US Bank branch locator)
+    // Content Flow Populator
+    csContentArea.innerHTML = "";
+
     if (caseId === "usbank") {
-      modalStoryFlow.innerHTML = `
+      csContentArea.innerHTML = `
         <div class="story-block no-image">
           <div class="cs-project-card">
             <div class="cs-project-header">Redesigning locator workflows for U.S. Bank</div>
@@ -558,7 +680,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const block = document.createElement("div");
           block.className = "story-block no-image";
           block.innerHTML = `<div class="story-text"><h3>${sec.text}</h3></div>`;
-          modalStoryFlow.appendChild(block);
+          csContentArea.appendChild(block);
         } else if (sec.type === "ui_card") {
           const block = document.createElement("div");
           block.className = "story-block no-image";
@@ -568,44 +690,43 @@ document.addEventListener("DOMContentLoaded", () => {
               <p>${sec.text}</p>
             </div>
           `;
-          modalStoryFlow.appendChild(block);
+          csContentArea.appendChild(block);
         }
       });
     }
 
-    csModal.classList.add("active");
-    csModal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
+    // Next case study trigger details
+    if (csNextTitle) {
+      csNextTitle.textContent = data.nextTitle;
+    }
+    if (btnNextCase) {
+      btnNextCase.onclick = () => {
+        openCaseStudy(data.nextId);
+      };
+    }
 
-  function closeCaseStudyModal() {
-    csModal.classList.remove("active");
-    csModal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
+    showCaseStudyView();
   }
-
-  if (modalClose) modalClose.addEventListener("click", closeCaseStudyModal);
-  if (modalBackdrop) modalBackdrop.addEventListener("click", closeCaseStudyModal);
 
   // Bind clickable cards
   const clickableCards = document.querySelectorAll(".clickable-card");
   clickableCards.forEach(card => {
     card.addEventListener("click", () => {
       const caseId = card.getAttribute("data-case");
-      openCaseStudyModal(caseId);
+      openCaseStudy(caseId);
     });
     // Keyboard navigation
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         const caseId = card.getAttribute("data-case");
-        openCaseStudyModal(caseId);
+        openCaseStudy(caseId);
       }
     });
   });
 
   /* ==========================================================================
-     7. IMAGE LIGHTBOX OVERLAY ZOOM
+     8. IMAGE LIGHTBOX OVERLAY ZOOM
      ========================================================================== */
   document.addEventListener("click", (e) => {
     const zoomContainer = e.target.closest(".zoomable-image");
