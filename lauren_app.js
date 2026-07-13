@@ -112,6 +112,7 @@ const CASE_STUDY_DATA = {
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/58168358-2c83-4231-9e84-f9f077fba113/Screen+Shot+2022-03-17+at+2.41.51+PM.png?format=750w",
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/fa80e2a2-7da2-4366-a164-3df5b3360885/Screen+Shot+2022-04-13+at+10.14.40+PM.png?format=750w",
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/b7ee5aa7-84b2-46d1-820a-e74cce8401a8/Screenshot+2025-10-02+at+5.05.22%E2%80%AFPM.png?format=750w",
+      "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/fa80e2a2-7da2-4366-a164-3df5b3360885/Screen+Shot+2022-04-13+at+10.14.40+PM.png?format=1500w", 
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/bdc142a9-c6dd-4af0-853c-3c1320684274/0-1.png?format=750w"
     ],
     "nextId": "verizon",
