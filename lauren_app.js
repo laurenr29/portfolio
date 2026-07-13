@@ -105,6 +105,7 @@ const CASE_STUDY_DATA = {
     ],
     "images": [
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/f59a402e-62c6-40de-adc5-0a3351633262/Screen+Shot+2022-05-05+at+6.23.13+PM.png?format=2500w",
+      "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/f89d6738-c2fd-490d-bb1d-9d515305a751/Screenshot+2025-09-17+at+3.51.16%E2%80%AFPM.png?format=750w", 
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/6d158984-dda3-4150-bbc1-dde5eefc510f/Screenshot+2025-09-17+at+3.51.56%E2%80%AFPM.png?format=1500w",
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/58168358-2c83-4231-9e84-f9f077fba113/Screen+Shot+2022-03-17+at+2.41.51+PM.png?format=2500w",
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/fa80e2a2-7da2-4366-a164-3df5b3360885/Screen+Shot+2022-04-13+at+10.14.40+PM.png?format=1500w",
