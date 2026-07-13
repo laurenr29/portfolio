@@ -208,8 +208,8 @@ const CASE_STUDY_DATA = {
     "images": [
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/74c5d73c-4480-42da-8bcc-ccf2c4ce85f6/Screenshot+2023-08-10+at+5.04.23+PM.png?format=2500w",
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/8c8ae780-01cd-421d-b09e-5ca4d172598e/Screenshot+2024-07-23+at+1.53.23%E2%80%AFPM.png?format=1500w",
-      "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/74c5d73c-4480-42da-8bcc-ccf2c4ce85f6/Screenshot+2023-08-10+at+5.04.23+PM.png?format=1500w",
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/aa2fc291-d065-425e-a50c-f248b0f40e9c/Screenshot+2024-07-23+at+8.06.53%E2%80%AFPM.png?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/74c5d73c-4480-42da-8bcc-ccf2c4ce85f6/Screenshot+2023-08-10+at+5.04.23+PM.png?format=1500w",
       "https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/5409b1f8-ab48-44cb-963c-5daf74826f92/Screenshot+2024-07-23+at+8.07.13%E2%80%AFPM.png?format=1500w"
     ],
     "nextId": "verizon1",
