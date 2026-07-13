@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet">
-  <link rel="stylesheet" href="lauren_style.css">
+  <link rel="stylesheet" href="lauren_style.css?v=2">
 </head>
 <body>
   <!-- Google Aurora Ambient Background Canvas -->
@@ -25,7 +25,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="#" class="brand-link" id="nav-home-logo">
-        <span class="brand-name">Lauren Ragland</span>
+        <span class="brand-name"><span class="google-l">L</span><span class="google-o">a</span><span class="google-g">u</span><span class="google-o2">r</span><span class="google-g2">e</span><span class="google-r">n</span> Ragland</span>
         <span class="brand-role">Senior UX content designer</span>
       </a>
 
@@ -55,6 +55,22 @@
         <p class="hero-subtext">
           I am a deadline-driven, run-into-the-fire UX Content Designer &amp; Writer with over 15 years of experience developing strategic vision, voice, and information architecture for world-class brands.
         </p>
+        <!-- Google Search Mockup Box -->
+        <div class="search-container">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="hero-search-input" placeholder="Search Lauren's 15+ years of UX experience..." aria-label="Search portfolio">
+            <button id="search-clear-btn" class="search-clear-btn" style="display:none;" aria-label="Clear search">&times;</button>
+            <span class="mic-icon" title="Search by Voice">🎤</span>
+            <span class="lens-icon" title="Search by Lens">📷</span>
+          </div>
+          <div class="search-buttons">
+            <button id="search-btn" class="google-btn">Google Search</button>
+            <button id="lucky-btn" class="google-btn">I'm Feeling Lucky</button>
+          </div>
+          <div id="search-results-stats" class="search-results-stats" style="display:none;"></div>
+        </div>
+
         <div class="hero-actions">
           <a href="#case-studies-section" class="btn-primary">
             <span>Explore case studies</span>
@@ -95,7 +111,7 @@
           <!-- Case Study 1: U.S. Bank -->
           <article class="case-card clickable-card" data-case="usbank" role="button" tabindex="0" aria-label="Explore U.S. Bank Case Study">
             <div class="card-image-wrapper">
-              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/f59a402e-62c6-40de-adc5-0a3351633262/Screen+Shot+2022-05-05+at+6.23.13+PM.png?format=750w" alt="U.S. Bank Financial & Mobile Banking Case Study" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/f59a402e-62c6-40de-adc5-0a3351633262/Screen+Shot+2022-05-05+at+6.23.13+PM.png?format=500w" alt="U.S. Bank Financial & Mobile Banking Case Study" loading="lazy" decoding="async" fetchpriority="low">
               <div class="card-image-overlay">
                 <span class="explore-badge">Explore case study &rarr;</span>
               </div>
@@ -118,7 +134,7 @@
           <!-- Case Study 2: Verizon -->
           <article class="case-card clickable-card" data-case="verizon" role="button" tabindex="0" aria-label="Explore Verizon Simplicity Case Study">
             <div class="card-image-wrapper">
-              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/74c5d73c-4480-42da-8bcc-ccf2c4ce85f6/Screenshot+2023-08-10+at+5.04.23+PM.png?format=750w" alt="Verizon Simplicity & 3.0 Guidelines Case Study" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/74c5d73c-4480-42da-8bcc-ccf2c4ce85f6/Screenshot+2023-08-10+at+5.04.23+PM.png?format=500w" alt="Verizon Simplicity & 3.0 Guidelines Case Study" loading="lazy" decoding="async" fetchpriority="low">
               <div class="card-image-overlay">
                 <span class="explore-badge">Explore case study &rarr;</span>
               </div>
@@ -141,7 +157,7 @@
           <!-- Case Study 3: Verizon Fios & Home Ecosystem (verizon1) -->
           <article class="case-card clickable-card" data-case="verizon1" role="button" tabindex="0" aria-label="Explore Verizon Fios Dashboard Case Study">
             <div class="card-image-wrapper">
-              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/56968c21-661e-49a4-b9ac-85a50bb7242f/Screenshot+2025-06-27+at+12.35.07%E2%80%AFPM.png?format=750w" alt="Verizon Fios Account Dashboard Case Study" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/56968c21-661e-49a4-b9ac-85a50bb7242f/Screenshot+2025-06-27+at+12.35.07%E2%80%AFPM.png?format=500w" alt="Verizon Fios Account Dashboard Case Study" loading="lazy" decoding="async" fetchpriority="low">
               <div class="card-image-overlay">
                 <span class="explore-badge">Explore case study &rarr;</span>
               </div>
@@ -164,7 +180,7 @@
           <!-- Case Study 4: Zillow / ZRM -->
           <article class="case-card clickable-card" data-case="zillow" role="button" tabindex="0" aria-label="Explore Zillow Rental Manager Case Study">
             <div class="card-image-wrapper">
-              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/6e4180aa-4807-424f-a1cb-7b09934e3939/Screen+Shot+2022-05-05+at+1.50.13+PM.png?format=750w" alt="Zillow Rental Manager Ecosystem Case Study" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/6e4180aa-4807-424f-a1cb-7b09934e3939/Screen+Shot+2022-05-05+at+1.50.13+PM.png?format=500w" alt="Zillow Rental Manager Ecosystem Case Study" loading="lazy" decoding="async" fetchpriority="low">
               <div class="card-image-overlay">
                 <span class="explore-badge">Explore case study &rarr;</span>
               </div>
@@ -187,7 +203,7 @@
           <!-- Case Study 4: Microsoft -->
           <article class="case-card clickable-card" data-case="microsoft" role="button" tabindex="0" aria-label="Explore Microsoft Cloud Case Study">
             <div class="card-image-wrapper">
-              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/1759761755668-OMSYK808CNS3OL1S9TEM/Screenshot%2B2025-09-30%2Bat%2B3.46.06%25E2%2580%25AFPM.png?format=750w" alt="Microsoft Cloud Portfolio Case Study" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/1759761755668-OMSYK808CNS3OL1S9TEM/Screenshot%2B2025-09-30%2Bat%2B3.46.06%25E2%2580%25AFPM.png?format=500w" alt="Microsoft Cloud Portfolio Case Study" loading="lazy" decoding="async" fetchpriority="low">
               <div class="card-image-overlay">
                 <span class="explore-badge">Explore case study &rarr;</span>
               </div>
@@ -210,7 +226,7 @@
           <!-- Case Study 5: WebMD -->
           <article class="case-card clickable-card" data-case="webmd" role="button" tabindex="0" aria-label="Explore WebMD Medical Journalism Case Study">
             <div class="card-image-wrapper">
-              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/1759327444967-CC67YJVHZTE7T8JMZIFA/Screenshot%2B2025-10-01%2Bat%2B9.35.29%25E2%2580%25AFAM.png?format=750w" alt="WebMD Medical Feature Journalism Case Study" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/1759327444967-CC67YJVHZTE7T8JMZIFA/Screenshot%2B2025-10-01%2Bat%2B9.35.29%25E2%2580%25AFAM.png?format=500w" alt="WebMD Medical Feature Journalism Case Study" loading="lazy" decoding="async" fetchpriority="low">
               <div class="card-image-overlay">
                 <span class="explore-badge">Explore case study &rarr;</span>
               </div>
@@ -233,7 +249,7 @@
           <!-- Case Study 6: Home Depot -->
           <article class="case-card clickable-card" data-case="homedepot" role="button" tabindex="0" aria-label="Explore Home Depot Catalog Case Study">
             <div class="card-image-wrapper">
-              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/1655129671205-WN9W4GM3BXXAD1S88FVA/51ZCLqorG6L.jpg?format=750w" alt="The Home Depot Catalog Style Guide Case Study" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/1655129671205-WN9W4GM3BXXAD1S88FVA/51ZCLqorG6L.jpg?format=500w" alt="The Home Depot Catalog Style Guide Case Study" loading="lazy" decoding="async" fetchpriority="low">
               <div class="card-image-overlay">
                 <span class="explore-badge">Explore case study &rarr;</span>
               </div>
@@ -669,7 +685,9 @@
   </div>
   <!-- END Curriculum vitae VIEW -->
 
-  <script src="lauren_app.js"></script>
+
+
+  <script src="lauren_app.js?v=2"></script>
 
   <!-- Full-Screen Lightbox Image Zoom Modal -->
   <div id="cs-lightbox-modal" class="cs-lightbox" aria-hidden="true" role="dialog" aria-label="Expanded Image View">

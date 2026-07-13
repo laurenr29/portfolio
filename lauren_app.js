@@ -942,11 +942,6 @@ function openCaseStudy(caseId) {
         </div>
       </div>
     </div>
-    <div class="cs-story-image image-single">
-      <a href="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/58168358-2c83-4231-9e84-f9f077fba113/Screen+Shot+2022-03-17+at+2.41.51+PM.png?format=750w" class="cs-image-link" title="Click to open image in lightbox">
-        <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/58168358-2c83-4231-9e84-f9f077fba113/Screen+Shot+2022-03-17+at+2.41.51+PM.png?format=750w" alt="Why it matters — Mobile app education module" loading="lazy" decoding="async" />
-      </a>
-    </div>
   </div>
 
   <!-- Filters & Map / The branch details page -->
@@ -958,6 +953,12 @@ function openCaseStudy(caseId) {
           <p class="cs-ui-text">Names for filters came from research using card sorting and interviews. The map meets accessibility standards with numbered pins and bank names under the selected pins.</p>
         </div>
       </div>
+    </div>
+
+    <div class="cs-story-image image-single">
+      <a href="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/58168358-2c83-4231-9e84-f9f077fba113/Screen+Shot+2022-03-17+at+2.41.51+PM.png?format=750w" class="cs-image-link" title="Click to open image in lightbox">
+        <img src="https://images.squarespace-cdn.com/content/v1/62a146e1083a5056b75e3e51/58168358-2c83-4231-9e84-f9f077fba113/Screen+Shot+2022-03-17+at+2.41.51+PM.png?format=750w" alt="Why it matters — Mobile app education module" loading="lazy" decoding="async" />
+      </a>
     </div>
 
     <div class="cs-story-image image-single">
