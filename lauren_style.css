@@ -23,11 +23,7 @@
 }
 
 /* DARK THEME (Obsidian Glass with Google Color Highlights) */
-[data-theme="dark"] {
-  --google-blue: #8ab4f8;
-  --google-red: #f28b82;
-  --google-yellow: #fdd663;
-  --google-green: #81c995;
+[data-theme="dark"]
 
   --bg-main: #07070a;
   --bg-surface: rgba(18, 18, 24, 0.65);
@@ -48,11 +44,6 @@
 }
 
 /* LIGHT THEME (Google Clean UI / Frost Glass) */
-[data-theme="light"] {
-  --google-blue: #1a73e8;
-  --google-red: #ea4335;
-  --google-yellow: #f9ab00;
-  --google-green: #34a853;
 
   --bg-main: #f8f9fc;
   --bg-surface: rgba(255, 255, 255, 0.75);
