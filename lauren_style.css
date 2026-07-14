@@ -6,6 +6,12 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Outfit', var(--font-sans);
 
+  /* Google Colors Palette variables */
+  --google-blue: #1a73e8;
+  --google-red: #ea4335;
+  --google-yellow: #f9ab00;
+  --google-green: #34a853;
+
   /* Google Design System Palette */
   --aurora-violet: var(--google-red);
   --aurora-cyan: var(--google-blue);
@@ -2473,9 +2479,6 @@ a {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-
-
 
 
 
