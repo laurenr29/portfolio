@@ -23,7 +23,11 @@
 }
 
 /* DARK THEME (Obsidian Glass with Google Color Highlights) */
-[data-theme="dark"]
+[data-theme="dark"] {
+  --google-blue: #8ab4f8;
+  --google-red: #f28b82;
+  --google-yellow: #fdd663;
+  --google-green: #81c995;
 
   --bg-main: #07070a;
   --bg-surface: rgba(18, 18, 24, 0.65);
@@ -42,7 +46,13 @@
   --shadow-hover: 0 24px 60px rgba(0, 0, 0, 0.7);
   --aurora-glow: 0 0 35px rgba(138, 180, 248, 0.25), 0 0 60px rgba(129, 201, 149, 0.15);
 }
+
 /* LIGHT THEME (Google Clean UI / Frost Glass) */
+[data-theme="light"] {
+  --google-blue: #1a73e8;
+  --google-red: #ea4335;
+  --google-yellow: #f9ab00;
+  --google-green: #34a853;
 
   --bg-main: #f8f9fc;
   --bg-surface: rgba(255, 255, 255, 0.75);
@@ -61,6 +71,7 @@
   --shadow-hover: 0 20px 50px rgba(20, 20, 22, 0.14);
   --aurora-glow: 0 0 35px rgba(26, 115, 232, 0.15), 0 0 60px rgba(52, 168, 83, 0.1);
 }
+
 /* Global Reset */
 * {
   box-sizing: border-box;
@@ -2462,6 +2473,9 @@ a {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+
 
 
 
